@@ -1,0 +1,29 @@
+<ion-content padding>
+
+  <loading *ngIf="loading"></loading>
+  
+  <img src="assets/imgs/blue-R.svg" class="login-page-logo">
+
+  <form [formGroup]="loginForm" novalidate (ngSubmit)="login(loginForm.value, loginForm.valid)">
+
+    <ion-list no-lines>
+
+      <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" formControlName="username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+
+    <div padding>
+      <button ion-button type="submit" color="primary" [disabled]=" ! loginForm.valid" block>Sign In</button>
+    </div>
+  </form>
+
+</ion-content>

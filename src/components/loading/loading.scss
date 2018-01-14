@@ -1,0 +1,22 @@
+loading {
+  .progress-spinner-loading-shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 56px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  ion-spinner * {
+    stroke: white !important;
+    width: 20vw;
+    height: 20vw;
+  }
+
+}
